@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src=""></script>
+    <title>Southeast Asia Air Quality</title>
+    
+  </head>
+  <body id="content">
+        <nav class="py-2 bg-light border-bottom">
+            <div class="container d-flex flex-wrap">
+            <ul class="nav me-auto ">
+                <li class="nav-item"><a href="index.html" class="nav-link link-dark px-2 active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="aboutus.html" class="nav-link link-dark px-2" >About Us</a></li>
+                <li class="nav-item"><b><a href="aqi.html" class="nav-link link-dark px-2" >AQI Information</a></b></li>
+                <li class="nav-item"><a href="map.html"class="nav-link link-dark px-2" >Map</a></li>
+                <li class="nav-item"><a href="causeandimpact.html" class="nav-link link-dark px-2" >Cause and Impact</a></li>
+                <li class="nav-item"><a href="prevention.html" class="nav-link link-dark px-2" >Prevention</a></li>
+                <div class="dropdown">
+                  <li class="dropbtn"><a href="#" class="nav-link link-dark px-2" >Real-time Index</a></li>
+              
+                  <div class="dropdown-content">
+                    <a href="https://www.iqair.com/malaysia/" target="_blank">Malaysia</a>
+                    <a href="https://www.iqair.com/singapore/" target="_blank">Singapore</a>
+                    <a href="https://www.iqair.com/brunei/" target="_blank">Brunei</a>
+                    <a href="https://www.iqair.com/myanmar/" target="_blank">Burma (Myanmar)</a>
+                    <a href="https://www.iqair.com/timor-leste" target="_blank">Timor-Leste</a>
+                    <a href="https://www.iqair.com/indonesia/" target="_blank">Indonesia</a>
+                    <a href="https://www.iqair.com/laos/" target="_blank">Laos</a>
+                    <a href="https://www.iqair.com/philippines/" target="_blank">Philippines</a>
+                    <a href="https://www.iqair.com/thailand/" target="_blank">Thailand  </a>
+                    <a href="https://www.iqair.com/vietnam/" target="_blank">Vietnam</a>
+                  </div>
+                </div> 
+            </ul>
+            </div>
+        </nav>
+      <header class="py-3 mb-4 border-bottom">
+        <div class="container d-flex flex-wrap justify-content-center">
+          <a href="#" class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+            <spam id="title" class="fs-4"href="#">Southeast Asia Air Quality</spam>
+            
+          </a>
+          
+          
+          <button id="dark-mode-toggle" type="button" class="btn btn-dark" onclick="changeColour()"><i class="bi bi-lightbulb-fill" id="dark-mode-toggle-icon">  Dark Mode</i> </button>
+        </div>
+        
+
+        
+      </header>
+
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            
+            <h1 style="text-align: left;">Air Quality Index (AQI) Basics</h1>
+            <p style="text-align: left;">The Air Quality Index (AQI) is a standardized metric used to communicate the quality of the air in a specific location. It provides a numerical value that corresponds to the overall air quality and indicates the potential health effects of breathing the air. 
+            </p>
+            <p style="text-align: left;">
+            The Air Quality Index (AQI) is segmented into six groups, each indicating a distinct level of health risk. Additionally, each group is associated with a particular color, simplifying the process for individuals to promptly assess if air quality is deteriorating to unhealthy levels in their vicinity.
+            </p>
+          
+        </div>
+        </br>
+        
+         
+        </div>
+        <div class="col" style="margin-top:50px;">
+            
+            <h1>AQI Basics for Ozone and Particle Pollution</h1>
+            <table class="table  table-striped">
+              <thead>
+                <tr class="table-dark">
+                  <th scope="col">Daily AQI Colour</th>
+                  <th scope="col">Levels of Concern</th>
+                  <th scope="col">Values of Index</th>
+                  <th scope="col">Description of Air Quality</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-success">
+                  <th scope="row">Green</th>
+                  <td>Good</td>
+                  <td>0 to 50</td>
+                  <td style="text-align: left;">Air quality is satisfactory,and air pollution poses little or no risk.</td>
+                </tr>
+                <tr style="background-color: yellow;">
+                  <th scope="row">Yellow</th>
+                  <td>Moderate</td>
+                  <td>51 to 100</td>
+                  <td style="text-align: left;">Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution.</td>
+                </tr>
+                <tr style="background-color: orange;">
+                  <th scope="row" >Orange</th>
+                  <td colspan="">Unhealthy for Sensitive Groups</td>
+                  <td>101 to 150</td>
+                  <td style="text-align: left;">Members of sensitive groups may experience health effects. The general public is less likely to be affected.</td>
+                </tr>
+                <tr style="background-color: red;">
+                    <th scope="row">Red</th>
+                    <td colspan="">Unhealthy </td>
+                    <td>151 to 200</td>
+                    <td style="text-align: left;">Some members of the general public may experience health effects; members of sensitive groups may experience more serious health effects.</td>
+                </tr>
+                <tr style="background-color: purple;">
+                    <th scope="row">Purple</th>
+                    <td colspan="">Very Unhealthy</td>
+                    <td>201 to 300</td>
+                    <td style="text-align: left;">Health alert: The risk of health effects is increased for everyone.</td>
+                </tr>
+                <tr style="background-color: maroon; ">
+                    <th scope="row">Maroon</th>
+                    <td colspan="">Hazardous</td>
+                    <td>301 and higher</td>
+                    <td style="text-align: left;">Health warning of emergency conditions: everyone is more likely to be affected.</td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+          <div class="row" style="margin-top:50px;">
+            <div class="col">
+              <div>
+
+                <h1>2023 IQAir World Air Quality</h1>
+                <p style="text-align: left;">According to the 2023 IQAir World Air Quality Report, Southeast Asia faced increasing challenges with air quality, with climate conditions and transboundary haze being major contributing factors. PM2.5 concentrations rose in nearly every country in the region, highlighting the urgent need for air quality management measures. Additionally, the report identified Central & South Asia as home to the top ten most polluted cities in the world, with Begusarai, India, being the most polluted metropolitan area of 2023. India, in particular,
+                   was highlighted as home to the four most polluted cities globally. These findings underscore the pressing need for coordinated efforts to address air pollution and its impacts on public health and the environment in these regions.</p>
+              </div>
+              <div class="col"><p style="text-align: left;">
+                source:<a href="https://www.iqair.com/newsroom/waqr-2023-pr">https://www.iqair.com/newsroom/waqr-2023-pr</a>
+              </p></div>
+            </div>
+            
+          </div>
+        
+        
+
+          <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Company, Inc</p>
+          
+              <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+              </a>
+          
+              <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Back to top</a></li>
+                
+                
+              </ul>
+            </footer>
+          </div>
+          
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+          
+          
+          document.addEventListener('DOMContentLoaded', (event) => {
+                const toggleButton = document.getElementById('dark-mode-toggle');
+                const content = document.getElementById('content');
+                const title = document.getElementById('title');
+                const icon = document.getElementById('dark-mode-toggle-icon');
+
+                // Load the user's preference if available
+                const savedMode = localStorage.getItem('dark-mode');
+                if (savedMode === 'enabled') {
+                    document.body.style.backgroundColor = 'black';
+                    document.body.style.color = 'white';
+                    content.style.backgroundColor = 'black';
+                    content.style.color = 'white';
+                }
+
+                // Toggle dark mode on button click
+                toggleButton.onclick = function() {
+                    if (document.body.style.backgroundColor === 'black') {
+                        title.style.color = "black";
+                        toggleButton.style.backgroundColor = "black";
+                        toggleButton.style.color = "white";
+                        icon.innerHTML = "  Dark Mode";
+                        document.body.style.backgroundColor = 'white';
+                        document.body.style.color = 'black';
+                        content.style.backgroundColor = 'white';
+                        content.style.color = 'black';
+                        localStorage.setItem('dark-mode', 'disabled');
+                    } else {
+                        title.style.color = "white";
+                        toggleButton.style.backgroundColor = "white";
+                        toggleButton.style.color = "black";
+                        icon.innerHTML = "  Light Mode";
+                        document.body.style.backgroundColor = 'black';
+                        document.body.style.color = 'white';
+                        content.style.backgroundColor = 'black';
+                        content.style.color = 'white';
+                        localStorage.setItem('dark-mode', 'enabled');
+                    }
+                };
+            });
+      </script>
+  </body>
+</html>
